@@ -1,0 +1,49 @@
+---
+title: "Demonstrating the imputeTestBench package"
+author: "Mayank"
+output: pdf_document
+---
+#### Introduction
+
+I will demonstrate the use of `imputeTestbench` on dataset nottem which contains monthly average air temperatures measured at Nottingham Castle from 1920 to 1939. This demonstration tries to use maximum functions available in the package.
+
+```{r}
+knitr::opts_chunk$set(echo=TRUE)
+
+#load required packages
+library(imputeTestbench)
+library(ggplot2)
+
+#loading Data
+data("nottem")
+nottem_ts <- as.ts(nottem)
+
+autoplot(nottem_ts) + ggtitle("Time Series Data")
+```
+
+#### Using imputeTestBench for simulating missing value and applying impute methods
+
+```{r}
+#Applying imputation using
+nottem_ts_imputed <- impute_errors(dataIn = nottem_ts,
+  smps = "mcar",
+  methods = c("na.approx",
+"na.interp", "na_interpolation", "na.locf", "na_mean"),
+  errorParameter = "rmse",
+  repetition = 10)
+print(nottem_ts_imputed)
+```
+#### Visualization of Errors
+
+```{r plot-errors}
+plot_errors(nottem_ts_imputed, plotType = "boxplot")
+```
+
+#### Visualization of Imputed Data
+
+```{r plot-impute}
+plot_impute(dataIn = nottem_ts, smps = "mcar", showmiss = TRUE)
+```
+
+#### Conclusion
+This analysis demonstrates the effectiveness of different imputation methods on missing time series data
