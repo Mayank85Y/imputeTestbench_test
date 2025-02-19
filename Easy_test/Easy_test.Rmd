@@ -1,7 +1,8 @@
 ---
 title: "Demonstrating the imputeTestBench package"
 author: "Mayank"
-output: pdf_document
+output:
+  html_document
 ---
 #### Introduction
 
@@ -36,7 +37,9 @@ print(nottem_ts_imputed)
 #### Visualization of Errors
 
 ```{r plot-errors}
-plot_errors(nottem_ts_imputed, plotType = "boxplot")
+
+plot_errors(nottem_ts_imputed, plotType = "line")
+
 ```
 
 #### Visualization of Imputed Data
