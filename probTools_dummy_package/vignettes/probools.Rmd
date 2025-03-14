@@ -1,0 +1,104 @@
+---
+title: "Guide to probabilityTools"
+author: "Mayank"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Advanced Guide to probabilityTools}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+library(probTools)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+`probTools` is an advanced R package designed for statistical and probabilistic analysis. This package cover following functionality:
+- Custom probability distributions
+- Bayesian updates
+- Order statistics
+- Generalized Pareto distribution fitting
+- Shannon entropy calculation
+
+## Installation
+Install the package using:
+
+```r
+# Install the package from source
+install.packages("probabilityTools")
+```
+
+Alternatively, install from GitHub (if applicable):
+
+```r
+# remotes::install_github("your_github/probabilityTools")
+```
+
+## Functions Overview
+
+### 1. Custom Probability Distribution
+The `custom_dis()` function computes the probability density function (PDF), cumulative density function (CDF), and generates random samples from a custom distribution.
+
+#### Usage:
+```r
+result <- custom_dis(1:10)
+result$samples
+```
+
+For details, see `?cusom_dis`.
+
+### 2. Bayesian Update with MAP Estimation
+The `bayesian_update()` function performs Bayesian updating given prior and likelihood values, computing the posterior distribution and Maximum A Posteriori (MAP) estimate.
+
+#### Usage:
+```r
+prior <- c(0.2, 0.5, 0.3)
+likelihood <- c(0.8, 0.1, 0.6)
+result <- bayesian_update(prior, likelihood)
+result$posterior
+```
+
+For details, see `?bayesian_update`.
+
+
+### 3. Order Statistic Expectation with Confidence Interval
+The `order_stat_expectation()` function estimates an order statistic's expectation and provides a confidence interval.
+
+#### Usage:
+```r
+order_stat_expectation(100, 5, rnorm, mean = 0, sd = 1)
+```
+
+For details, see `?order_stat_expectation`.
+
+
+### 4. Fit Generalized Pareto Distribution (GPD) with Summary Stats
+The `fit_gpd()` function fits a GPD to given data and provides summary statistics.
+
+#### Usage:
+```r
+data <- rgamma(100, shape = 2, scale = 1)
+fit_gpd(data)
+```
+
+For details, see `?fit_gpd`.
+
+
+### 5. Shannon Entropy with Normalized Output
+The `shannon_entropy()` function computes Shannon entropy and normalizes it to a 0-1 scale.
+
+#### Usage:
+```r
+probs <- c(0.2, 0.3, 0.5)
+shannon_entropy(probs)
+```
+
+For details, see `?shannon_entropy`.
+
+## Conclusion
+This vignette provides a guide to `probabilityTools`, covering its key functionalities and applications. For further assistance, check the function package.

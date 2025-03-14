@@ -1,0 +1,18 @@
+Package: probTools
+Title: Probability and Statistics Utilities
+Version: 0.0.0.9000
+Author: Mayank Yadav
+Maintainer: Mayank Yadav <mayank7093yadav@gmail.com>
+Description: This package provide tools for probability distributions, Bayesian inference, order statistics, entropy, and extreme value theory.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+Imports:
+   evir
