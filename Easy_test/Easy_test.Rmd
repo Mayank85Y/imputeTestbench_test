@@ -1,8 +1,7 @@
 ---
 title: "Demonstrating the imputeTestBench package"
 author: "Mayank"
-output:
-  html_document
+output: html_document
 ---
 #### Introduction
 
