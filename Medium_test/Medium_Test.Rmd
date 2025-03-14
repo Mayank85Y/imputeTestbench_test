@@ -8,24 +8,24 @@ output: pdf_document
 
 The `imputetestbench` package in R currently offers a limited number of functions, making it essential for further development and enhancement. While it provides some basic tools for imputing missing data, there are numerous aspects that could be improved or added.The potential for growth in this package is substantial, and there are many opportunities for contributors to make meaningful advancements in its functionality.
 
-###### *1) Addition of more options in existing Methods of `imputeTestbench`*
+### 1) Addition of more options in existing Methods of `imputeTestbench`
 
 Their is a need of more options in existing function. Like in `impute_errors` their is a scope of addition of more methods for imputation and more  sampling methods, and same can be said for `plot_error` their is need of more options in plotType. Not only that many graph options can be added in plot_errors, plot_errorserrprof and plot_impute for better visualization
 
-###### * 2) Improvement in Documentation *
+### 2) Improvement in Documentation
 
 Their is a scope of improvement in documentation of `imputeTestbench`. Every function have much better documentation for better understanding of thee package `imputeTestbench`.
 
-###### * 3) Addition FUNCTIONS that are already available in other language and ImputeTS *
+### 3) Addition FUNCTIONS that are already available in other language and ImputeTS 
 
 As discussed in above point new feature can be added but it would be better to start with different methods and option that are already available in other packages and other library so it can be more easy for users to do a smooth transition into `imputeTestbench`.
 
-###### * 4) Multivariate Imputation *
+### 4) Multivariate Imputation 
 
 The most important thing that can be done is adding multivariate Imputation which is the whole premise of the project.
 
 
-###### * Conclusion *
+### Conclusion 
 
 Addition of new features is important in current `imputeTestbench` package all points discussed will definitely help the users to implement and understand different features of this package.
 
